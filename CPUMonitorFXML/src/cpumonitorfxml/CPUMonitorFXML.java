@@ -1,5 +1,5 @@
 
-package jbhkt7cpumonitorfxml;
+package cpumonitorfxml;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +11,7 @@ import javafx.stage.Stage;
  *
  * @author Jacob Hollis
  */
-public class Jbhkt7CPUMonitorFXML extends Application {
+public class CPUMonitorFXML extends Application {
 
     
     @Override

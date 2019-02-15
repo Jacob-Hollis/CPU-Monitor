@@ -1,5 +1,5 @@
 
-package jbhkt7cpumonitorfxml;
+package cpumonitorfxml;
 
 import java.io.File;
 import java.lang.management.ManagementFactory;
@@ -28,7 +28,7 @@ import javafx.util.Duration;
  *
  * @author Jacob Hollis
  */
-public class Jbhkt7CPUMonitorFXMLController implements Initializable {
+public class CPUMonitorFXMLController implements Initializable {
     
     @FXML
     private AnchorPane root;
@@ -71,7 +71,7 @@ public class Jbhkt7CPUMonitorFXMLController implements Initializable {
                 new KeyFrame(Duration.millis(1),
                 e -> {
                     double cpu = 0;    
-                    cpu = Jbhkt7CPUMonitorFXMLController.getCPUUsage();
+                    cpu = CPUMonitorFXMLController.getCPUUsage();
                     double angle = startangle + (cpu*270);
                     handImage.setRotate(angle);
                 }),
@@ -128,7 +128,7 @@ public class Jbhkt7CPUMonitorFXMLController implements Initializable {
     
     private String getFormattedCPUValue(){
                     double cpu = 0; 
-                    cpu = Jbhkt7CPUMonitorFXMLController.getCPUUsage();
+                    cpu = CPUMonitorFXMLController.getCPUUsage();
                     if(Double.isNaN(cpu)){ //redundant checking to see if value is equal to NaN, if so set the value to 0
                         cpu = 0;
                     }
@@ -141,9 +141,9 @@ public class Jbhkt7CPUMonitorFXMLController implements Initializable {
     
     private String getFormattedMemoryValue(){
                     long freemem = 0; 
-                    freemem = Jbhkt7CPUMonitorFXMLController.getFreeMemoryUsage();
+                    freemem = CPUMonitorFXMLController.getFreeMemoryUsage();
                     long totalmem = 0;
-                    totalmem = Jbhkt7CPUMonitorFXMLController.getTotalMemory();
+                    totalmem = CPUMonitorFXMLController.getTotalMemory();
                     double usedmem = (totalmem-freemem);
                     double currentmem = (usedmem/totalmem)*100;
                     DecimalFormat decformat = new DecimalFormat("#0.00");
