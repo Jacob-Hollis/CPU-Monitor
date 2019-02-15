@@ -16,7 +16,7 @@ public class CPUMonitorFXML extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Jbhkt7CPUMonitorFXML.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("CPUMonitorFXML.fxml"));
         
         Scene scene = new Scene(root);
         
